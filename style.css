@@ -1,0 +1,473 @@
+  
+
+
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+}
+
+
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.85)
+    ),
+    url("https://tse4.mm.bing.net/th/id/OIP.skzec96LCS0bWMqGkQWD5wHaEK?pid=Api&P=0&h=180");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+}
+
+
+
+.navbar{
+    width:100%;
+    padding:20px 10%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#e50914;
+    font-size:2rem;
+    font-weight:900;
+}
+
+.nav-right{
+    display:flex;
+    gap:10px;
+}
+
+.nav-right select{
+    background:transparent;
+    color:white;
+    padding:8px 15px;
+    border:1px solid gray;
+    border-radius:4px;
+}
+
+.nav-right button{
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    width:90%;
+     max-width: 900px;
+}
+
+.hero-content h1{
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-content h3{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.hero-content p{
+    margin-top:15px;
+    font-size:1rem;
+}
+
+.start-btn{
+    margin-top:25px;
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:1.2rem;
+    font-weight:bold;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+
+
+.curve{
+    position:absolute;
+    bottom:-120px;
+    left:-10%;
+
+    width:120%;
+    height:250px;
+
+    background:black;
+
+    border-top:4px solid #ff0055;
+
+    border-radius:100% 100% 0 0;
+}
+
+
+
+.section{
+    width:80%;
+    margin:auto;
+    padding:50px 0;
+}
+
+.section h2{
+    margin-bottom:20px;
+}
+
+
+
+.trending-container{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding-bottom:10px;
+}
+
+.trending-container::-webkit-scrollbar{
+    display:none;
+}
+.movie-card{
+    min-width:180px;
+    height:250px;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.movie-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.movie-card:hover{
+    transform:scale(1.08);
+}
+
+
+.reason-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+
+.reason-card{
+    background:linear-gradient(
+        180deg,
+        #1f1639,
+        #24122b
+    );
+
+    padding:20px;
+    border-radius:15px;
+    min-height:220px;
+}
+
+.reason-card h3{
+    margin-bottom:15px;
+}
+
+.reason-card p{
+    color:#ccc;
+    line-height:1.5;
+}
+
+
+
+.faq{
+    width:100%;
+}
+
+.faq-item{
+    margin-bottom:8px;
+}
+
+.question{
+    background:#2d2d2d;
+    color:white;
+    padding:24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.question:hover{
+    background:#414141;
+}
+
+.question h3{
+    font-size:24px;
+    font-weight:400;
+}
+
+.question span{
+    font-size:40px;
+    font-weight:300;
+    transition:0.3s;
+}
+
+.answer{
+    background:#2d2d2d;
+    color:white;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+}
+
+.answer p{
+    padding:24px;
+    font-size:24px;
+    line-height:1.5;
+}
+
+.faq-item.active .answer{
+    max-height:500px;
+}
+
+.faq-item.active .question span{
+    transform:rotate(45deg);
+}
+
+
+footer{
+    width:80%;
+    margin:auto;
+    padding:60px 0;
+}
+
+.footer-links{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.footer-links a{
+    color:#999;
+    text-decoration:none;
+    display:block;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    text-decoration:underline;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media screen and (max-width:768px){
+
+    .navbar{
+        padding:20px 5%;
+    }
+
+    .logo{
+        font-size:1.8rem;
+    }
+
+    .hero-content h1{
+        font-size:2.8rem;
+        line-height:1.2;
+    }
+
+    .hero-content h3{
+        font-size:1.1rem;
+    }
+
+    .hero-content p{
+        font-size:0.95rem;
+    }
+
+    .movie-card{
+        min-width:150px;
+        height:220px;
+    }
+
+    .reason-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-links{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .curve{
+        height:180px;
+        bottom:-90px;
+    }
+
+    .section{
+        width:90%;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media screen and (max-width:600px){
+
+    .navbar{
+        padding:15px 4%;
+    }
+
+    .logo{
+        font-size:1.5rem;
+    }
+
+    .nav-right{
+        gap:5px;
+    }
+
+    .nav-right select{
+        padding:6px 10px;
+        font-size:12px;
+    }
+
+    .nav-right button{
+        padding:6px 10px;
+        font-size:12px;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+        line-height:1.2;
+    }
+
+    .hero-content h3{
+        font-size:1rem;
+    }
+
+    .hero-content p{
+        font-size:0.9rem;
+    }
+
+    .start-btn{
+        width:100%;
+        max-width:300px;
+        padding:14px;
+        font-size:1rem;
+    }
+
+    .section{
+        width:95%;
+    }
+
+    .movie-card{
+        min-width:130px;
+        height:190px;
+    }
+
+    .reason-grid{
+        grid-template-columns:1fr;
+    }
+
+    .question h3{
+        font-size:18px;
+    }
+
+    .question span{
+        font-size:30px;
+    }
+
+    .answer p{
+        font-size:18px;
+    }
+
+    .footer-links{
+        grid-template-columns:1fr;
+    }
+
+    .curve{
+        height:150px;
+        bottom:-80px;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    .logo{
+        font-size:1.3rem;
+    }
+
+    .hero-content h1{
+        font-size:1.7rem;
+    }
+
+    .hero-content h3{
+        font-size:0.9rem;
+    }
+
+    .hero-content p{
+        font-size:0.8rem;
+    }
+
+    .movie-card{
+        min-width:110px;
+        height:160px;
+    }
+
+    .nav-right select{
+        font-size:11px;
+        padding:5px 8px;
+    }
+
+    .nav-right button{
+        font-size:11px;
+        padding:5px 8px;
+    }
+}
+
+
+
+@media(max-width:480px){
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .hero-content h3{
+        font-size:1rem;
+    }
+
+    .start-btn{
+        width:100%;
+    }
+
+    .footer-links{
+        grid-template-columns:1fr;
+    }
+}
