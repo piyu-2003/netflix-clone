@@ -286,9 +286,6 @@ footer{
     text-decoration:underline;
 }
 
-/* =========================
-   TABLET
-========================= */
 @media screen and (max-width:768px){
 
     .navbar{
@@ -335,9 +332,6 @@ footer{
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
 @media screen and (max-width:600px){
 
     .navbar{
